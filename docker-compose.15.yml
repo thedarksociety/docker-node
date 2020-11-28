@@ -1,0 +1,5 @@
+
+version: '3'
+services:
+  node:
+    container_name: dscr_node

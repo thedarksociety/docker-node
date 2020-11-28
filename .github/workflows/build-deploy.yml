@@ -1,0 +1,38 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - '10-alpine'
+      - '10-buster'
+      - '12-alpine'
+      - '12-buster'
+      - '14-alpine'
+      - '14-buster'
+      - '15-alpine'
+      - '15-buster'
+
+env:
+  GIT_SHA: ${{ github.sha }}
+  GIT_REF: ${{ github.ref }}
+  REGISTRY_NAME: gcr.io
+  IMAGE_NAME: node
+
+jobs:
+  test:
+    name: Image Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@main
+      - name: Run Compose Tests
+        run: |
+          export TAG=`echo $GIT_REF | awk -F/ '{print $NF}'`
+          export VERSION=`echo $TAG | cut -d "-" -f 1`
+          export FLAVOR=`echo $TAG | cut -d "-" -f 2`
+          if [ -f docker-compose."$VERSION".yml ];
+            docker-compose --file docker-compose."$VERSION".yml build
+            docker-compose --file docker-compose."$VERSION".yml run sut
+          else
+            docker build . --file "$VERSION"/"$TAG"/Dockerfile
+          fi
