@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  # Just copypasta the block from tests
+  node-alpine:
+    build:
+      context: image/10/alpine
+      dockerfile: Dockerfile
+    container_name: dscr_node-alpine

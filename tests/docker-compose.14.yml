@@ -1,5 +1,15 @@
-
 version: '3'
+
 services:
-  node:
-    container_name: dscr_node
+  
+  node-alpine:
+    build:
+      context: ../image/14/alpine
+      dockerfile: Dockerfile
+    container_name: dscr_node-alpine
+
+  node-buster:
+    build:
+      context: ../image/14/buster
+      dockerfile: Dockerfile
+    container_name: dscr_node-buster
