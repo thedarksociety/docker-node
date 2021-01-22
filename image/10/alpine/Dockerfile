@@ -1,7 +1,3 @@
+FROM node:10-alpine
 
-ARG NODE_VERSION=10-alpine
-FROM node:$NODE_VERSION
-
-LABEL \
-    maintainer="The Dark Society <containers@darksociety.cloud>" \
-    version="0.1"
+LABEL maintainer="The Dark Society <containers@darksociety.cloud>"

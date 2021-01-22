@@ -1,7 +1,3 @@
+FROM node:10-buster
 
-ARG NODE_VERSION=10-buster
-FROM node:$NODE_VERSION
-
-LABEL \
-    maintainer="The Dark Society <containers@darksociety.cloud>" \
-    version="0.1"
+LABEL maintainer="The Dark Society <containers@darksociety.cloud>"
