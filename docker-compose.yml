@@ -1,10 +1,50 @@
 version: '3'
 
+# Run all Node containers to test
+
+
 services:
 
-  # Just copypasta the block from tests
-  node-alpine:
+  # Node v14.15 (alpine)
+  14-alpine:
     build:
-      context: image/10/alpine
+      context: ./image/14/alpine
       dockerfile: Dockerfile
-    container_name: dscr_node-alpine
+    image: dsrc/node
+    container_name: 14-alpine
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./app:/node/app
+    networks:
+      - default
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '5'
+
+  # Node v14.15 (buster)
+#  14-buster:
+#    build:
+#      context: ./image/14/buster
+#      dockerfile: Dockerfile
+#    image: node
+#    container_name: 14-buster
+
+  # Node v14.15 (alpine)
+#  15-alpine:
+#    build:
+#      context: ./image/15/alpine
+#      dockerfile: Dockerfile
+#    image: node
+#    container_name: 15-alpine
+
+  # Node v14.15 (buster)
+#  15-buster:
+#    build:
+#      context: ./image/14/buster
+#      dockerfile: Dockerfile
+#    image: node
+#    container_name: 15-buster
