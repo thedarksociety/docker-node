@@ -2,14 +2,14 @@ version: '3'
 
 services:
 
-  # Node v15.13 (alpine)
-  15-alpine:
+  # Node v15.13 (buster)
+  15-buster:
 
     build:
-      context: ./image/15/alpine
+      context: ./image/15/buster
       dockerfile: Dockerfile
     image: dsrc/node
-    container_name: 15-alpine
+    container_name: 15-buster
 
     restart: always
     ports:

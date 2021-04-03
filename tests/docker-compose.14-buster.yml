@@ -1,15 +1,27 @@
 version: '3'
 
 services:
-  
-  node-alpine:
-    build:
-      context: ../image/14/alpine
-      dockerfile: Dockerfile
-    container_name: dscr_node-alpine
 
-  node-buster:
+  # Node v14.15 (buster)
+  14-buster:
+
     build:
-      context: ../image/14/buster
+      context: ./image/14/buster
       dockerfile: Dockerfile
-    container_name: dscr_node-buster
+    image: dsrc/node
+    container_name: 14-buster
+
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - default
+
+    volumes:
+      - ./tests:/node/app
+
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '5'
