@@ -1,4 +1,4 @@
-Node Image for the DSCR
+Node Image for the DSCR 
 =======================
 
 
@@ -37,13 +37,12 @@ Getting Started
 Here is some information.
 
 ### Why use Dark Society Images?
- * One
+ * Code in containers provides reproducibility and dependability local environments cannot provide.
  * Close to app dependencies
  * size
  * do me a favor
- * Signed, you can verify inregiry w/ DCT docker content trust
 
-> Cuz we are really cool
+> Cuz I am trying to be cool
 
 ### Requirements
 
@@ -61,9 +60,10 @@ Usage
 
 ### Features
 
- * Drops you into the REPL
- * Two
- * THree
+ * Drops you into the REPL [WIP]
+ * Dumb inits, uses container as an executable
+ * Includes some basic needs that the other node does not come w/
+ * Is hosted through the DSCR
  
  
 ### Pulling the Image
@@ -72,7 +72,7 @@ Private currently - Become a customer and use them, or fork them and use them!
 
 ### Configs
 
-Default directory is /node/app
+Default directory is /node
 
 
 ### Example Dockerfile for Your Project
@@ -93,7 +93,7 @@ RUN apk add --no-cache python3
 # Now install
 RUN yarn ci --prod
 
-CMD ["node", "index.js"]
+STILL WORKING ON THIS -><-
 ```
 
 ### Environment
@@ -117,7 +117,9 @@ CMD ["node", "index.js"]
 
 Resources
 ---------
-
+ 
+ * [Dark jsDK](https://github.com/iods/js-dark) - A JavaScript Project using the Docker Node Image
+ * [Congruence](https://github.com/thedarksociety/congruence-standards)
  * [Developer Standards](https://github.com/GalvanizeOpenSource/developer-standards)
  
 
@@ -135,6 +137,8 @@ Developers
 
 Changelog
 ---------
+
+
 
 ### [2020-11-27]
  * Added versions 10, 12, 14, and 15 to the DSCR
@@ -156,4 +160,4 @@ maintained under [the Semantic Versioning Guidelines](http://semver.og).
 Copyright
 ---------
 
-Copyright (c) 2020 The Dark Society
+Copyright (c) 2021 The Dark Society
