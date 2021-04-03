@@ -5,25 +5,18 @@
 #
 -include .env
 
-DC = docker-compose
-REPO = dscr/node
-TAG ?= 14-alpine
+default: build
 
-# ---------------------------------------------------------------------------- #
 build:
 	@docker build \
+		--rm \
 		--no-cache \
-		-t $(REPO):$(TAG) \
+		--build-arg "TEST_ARGUMENT" \
+		--tag dscr/node:14-alpine \
 		./image/14/alpine/
 
+run:
+	@docker run --name "nodejs" -d -i -t dscr/node:14-alpine $(CMD)
+
 start:
-	@docker run -d --name nodejs $(REPO):$(TAG)
-
-shell:
-	@docker run --rm --name nodejs -i -t $(REPO):$(TAG) /bin/bash
-
-test:
-	@docker run --rm --name nodejs $(REPO):$(TAG) $(CMD)
-
-repl:
-	@docker run -d -it --name nodejs $(REPO):$(TAG)
+	@docker run -d --name "nodejs" -d -i -t dscr/node:14-alpine
