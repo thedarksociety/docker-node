@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  # Node v15.13 (alpine)
+  15-alpine:
+
+    build:
+      context: ./image/15/alpine
+      dockerfile: Dockerfile
+    image: dsrc/node
+    container_name: 15-alpine
+
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - default
+
+    volumes:
+      - ./tests:/node/app
+
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '5'
