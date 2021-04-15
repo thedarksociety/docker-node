@@ -35,11 +35,11 @@
 
 <!-- SUMMARY -->
 <p align="center">
-  <a href="#why-ds">Why use the DSCR?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#why-use-dark-society-images">Why use the DSCR?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#usage">What's inside?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-whats-inside">What's inside?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#development">Development/a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#authors">Authors</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">License</a>
 </p>
 <!-- END: SUMMARY -->
@@ -77,7 +77,7 @@ Table of Contents
 - [Usage](#usage)
   - [Built With](#built-with)
   - [How to use this image](#pulling-the-image)
-- [Development](#wrench-development)
+- [Development](#development)
   - [Example Dockerfile for Your Project]()
   - [Environment](#environment)
   - [Scripts](#scripts)
@@ -257,8 +257,15 @@ See also the list of [contributors](https://github.com/thedarksociety/docker-nod
 Notable Changes
 ---------------
 
+
+### [2021-04-14]
+ * Added some templates for repo documentation
+ * Updated packages in builds for Alpine 14, 15
+ * Release of v1.0
+
+
 ### [2020-11-27]
-* Added versions 10, 12, 14, and 15 to the DSCR
+ * Added versions 10, 12, 14, and 15 to the DSCR
 
 
 Contributing
@@ -278,7 +285,7 @@ License
 
 This project is licensed :memo: under the MIT License - see the [LICENSE](LICENSE) file for details
 
---
+---
 
 <h4 align="center">
   Built with 💙 By <a href="https://github.com/iods">@iods</a>
