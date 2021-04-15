@@ -38,12 +38,12 @@
   <a href="#why-use-dark-society-images">Why use the DSCR?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#usage">What's inside?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#development">Development/a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#development">Developers</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#authors">Authors</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">License</a>
 </p>
 <!-- END: SUMMARY -->
-`
+
 
 ### Description
 
@@ -77,7 +77,7 @@ Table of Contents
 - [Usage](#usage)
   - [Built With](#built-with)
   - [How to use this image](#pulling-the-image)
-- [Development](#development)
+- [Development](#wrench-development)
   - [Example Dockerfile for Your Project]()
   - [Environment](#environment)
   - [Scripts](#scripts)
